@@ -1,6 +1,7 @@
 # DB design
 
-##users table
+## users table
+
 |Column|Type|Option|
 |------|----|------|
 |nickname|string|index: true, null: false, unique: true|
@@ -17,7 +18,8 @@
 |created_at|datetime|null: false|
 |updated_at|datetime|null: false|
 
-###Assocation
+### Assocation
+
 - has_one :address, dependent: :destroy
 - has_one :payments, dependent: :destoroy
 - has_many :authorizations, dependent: :destroy
@@ -25,7 +27,7 @@
 - has_many :purchase_histories, foregin_key: :purchase_id
 - belongs_to: user_product
 
-##adresses table
+## adresses table
 
 |Column|Type|Option|
 |------|----|------|
@@ -43,10 +45,11 @@
 |created_at|datetime|null: false|
 |updated_at|datetime|null: false|
 
-###Association
+### Association
+
 - belongs_to :user
 
-##authorizations table
+## authorizations table
 
 |Column|Type|Option|
 |------|----|------|
@@ -56,10 +59,11 @@
 |created_at|datetime|null: false|
 |updated_at|datetime|null: false|
 
-###Association
+### Association
+
 - belongs_to :user
 
-##payments table
+## payments table
 |Column|Type|Option|
 |------|----|------|
 |user_id|bigint|null: false|
@@ -67,10 +71,10 @@
 |created_at|datetime|null: false|
 |updated_at|datetime|null: false|
 
-###Association
+### Association
 - belongs_to :user
 
-##product_images table
+## product_images table
 |Column|Type|Option|
 |------|----|------|
 |image|string|null: false|
@@ -78,10 +82,12 @@
 |created_at|datetime|null: false|
 |updated_at|datetime|null: false|
 
-###Assocation
+### Assocation
+
 - belongs_to :product
 
-##products table
+## products table
+
 |Column|Type|Option|
 |------|----|------|
 |name|string|index: true, null: false|
@@ -106,7 +112,8 @@
 |purchased|boolean|default: false, null: false|
 |published|boolean|default: true, null: false|
 
-###Association
+### Association
+
 - belongs_to :user_product
 - belongs_to :category_products
 - has_many :payments
@@ -117,37 +124,42 @@
 - has_many :images, class_name: "ProductImage", dependent: :destroy
 - has_one :purchase_history
 
-##user_products table
+## user_products table
+
 |Column|Type|Option|
 |------|----|------|
 |purchaser_id|integer||
 |product_id|integer||
 |business_status|enum||
 
-###Association
+### Association
+
 - belongs_to :purchaser
 - belongs_to :product
 
-##comments table
+## comments table
+
 |Column|Type|Option|
 |------|----|------|
 |body|string||
 |user_id|integer|foreign_key: true|
 |product_id|integer|foreign_key: true|
 
-###Association
+### Association
+
 - belongs_to :product
 - belongs_to :user
 
-##likes table
+## likes table
 
-##Association
+## Association
+
 - belongs_to :product, counter_cache: :likes_count
 - belongs_to :user
 
-##categories table
+## categories table
 
-###awesome_nested_setを使用
+### awesome_nested_setを使用
 
 |Column|Type|Option|
 |------|----|------|
@@ -156,18 +168,20 @@
 |lft|integer|index: true|
 |rgt|integer|index: true|
 
-###Association
+### Association
+
 - has_many: product, through: category_products
 - belongs_to: category_products
 
-##categories_products table
+## categories_products table
 
 |Column|Type|Option|
 |------|----|------|
 |product_id|bigint||
 |category|bigint||
 
-##purchase_histories table
+## purchase_histories table
+
 |Column|Type|Option|
 |------|----|------|
 |purchase_id|bigint|null: false|
@@ -176,7 +190,8 @@
 |creted_at|datetime|null: false|
 |updated_at|datetime|null: false|
 
-###Association
+### Association
+
 - belongs_to :purchaser, class_name: "User", foreign_key: :purchaser_id
 - belongs_to :product
 

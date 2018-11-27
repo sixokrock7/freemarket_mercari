@@ -1,6 +1,13 @@
 class Authentication < ApplicationRecord
   belongs_to :user
 
+  validates :user_id,
+            :provider,
+            :uid,
+            presence: true
+
+  validates :provider, uniqueness: { scope: :uid }
+
   def self.find_by_auth(auth)
     find_by(provider: auth.provider, uid: auth.uid)
   end

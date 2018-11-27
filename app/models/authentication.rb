@@ -12,7 +12,7 @@ class Authentication < ApplicationRecord
     find_by(provider: auth.provider, uid: auth.uid)
   end
 
-  def self.find_or_create_from_oauth(auth)
+  def self.find_or_create_by_oauth(auth)
     authentication =Authentication.find_by_auth(auth)
     if authentication.nil?
       Authentication.find_or_create_user(auth)
@@ -23,7 +23,7 @@ class Authentication < ApplicationRecord
 
   def self.find_or_create_user(auth)
     registered_user = User.find_by(email: info.email)
-    if registered_user.nil?
+    if registered_user
       user = User.create!(
         nickname: auth.info.name,
         email: auth.info.email,

@@ -6,7 +6,7 @@ RSpec.describe Authentication, type: :model do
   describe 'Validations' do
     it { is_expected.to validate_presence_of :user_id }
     it { is_expected.to validate_presence_of :provider }
-    it { is_expected/to validate_presence_of :uid }
+    it { is_expected.to validate_presence_of :uid }
     it { is_expected.to validate_uniqueness_of(:provider).scoped_to(:uid) }
   end
 
@@ -41,7 +41,7 @@ RSpec.describe Authentication, type: :model do
     context 'when user already registered' do
       it 'returns registered_user and creates new authentication' do
         info_hash = { email: user.email }
-        auth = OmniAuth::AuthHash.new(provider: "foo", uid: 000_000_000, info_hash)
+        auth = OmniAuth::AuthHash.new(provider: "foo", uid: 000_000_000, info: info_hash)
         expect{ Authentication.find_or_create_user(auth) }.to change{ Authentication.count }.by(1).and change{User.count }.by(0)
       end
     end

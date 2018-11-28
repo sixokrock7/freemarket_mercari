@@ -74,3 +74,31 @@ rubocop \
   --auto-correct
 
  (called from block (2 levels) in <top (required)> at /Users/nakamuratatsuki/projects/freemarket_mercari/spec/factories/authentication.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+uid { 123456789 }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <top (required)> at /Users/nakamuratatsuki/projects/freemarket_mercari/spec/factories/authentication.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+provider { "hoge" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <top (required)> at /Users/nakamuratatsuki/projects/freemarket_mercari/spec/factories/authentication.rb:5)

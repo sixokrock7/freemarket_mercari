@@ -49,12 +49,12 @@
 
 - belongs_to :user
 
-## authorizations table
+## authentications table
 
 |Column|Type|Option|
 |------|----|------|
 |user_id|bigint|null: false|
-|proviser|string|null: false|
+|provider|string|null: false|
 |uid|string|null: false|
 |created_at|datetime|null: false|
 |updated_at|datetime|null: false|

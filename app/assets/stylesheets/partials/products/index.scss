@@ -32,7 +32,6 @@
 
 .super-title {
   line-height: 1.2;
-  font-weight: bold;
   color: #fff;
   font-size: 60px;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
@@ -59,5 +58,112 @@
     img {
       width: 100%;
     }
+  }
+}
+
+.main-introduction {
+  padding: 40px 20px;
+
+  &__title {
+    font-size: 26px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  &__lists {
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+    min-width: 960px;
+    max-width: 1072px;
+
+    li {
+      display: inline-block;
+      width: 30%;
+      margin: 16px 3.3% 0 0;
+      vertical-align: top;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+  }
+
+  img {
+    width: 100%;
+    margin: 16px 0 0;
+  }
+
+  p {
+    margin: 16px 0 0;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+}
+
+.introduction-num {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  border-radius: 50%;
+  background: #ea352d;
+  text-align: center;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+}
+
+.main-dl-area {
+  position: relative;
+  padding: 0;
+  height: 400px;
+  background: image-url("download_area_bg_pc.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  margin-right: auto;
+  margin-left: auto;
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 27px;
+    letter-spacing: .03em;
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .store-btns {
+    @include clearFix;
+    padding-top: 7px;
+    width: 348px;
+    margin: 0 auto;
+  }
+
+  a {
+    width: 170px;
+    height: 50px;
+  }
+
+  img {
+    width: 128px;
+    height: 38px;
   }
 }

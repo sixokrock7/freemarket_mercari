@@ -17,6 +17,48 @@
             = lint_to do
               = image_tag "google-play.svg"
         = image_tag "main_content_pc.png", class: "main-visual-contents__image"
+    .main-introduction
+      %h2.main-introduction__title
+        メルカリは、かんたんに売り買いができて、
+        %br あんしん・あんぜんなお取引ができる
+        フリマアプリです。
+      %ul.main-introduction__lists
+        %li
+          %h3
+            %span.introduction-num 1
+            簡単に出品できる
+            = image_tag "start1"
+            %p
+              スマホで写真を撮って
+              %br 特徴を入力するだけで、
+              簡単に出品できます。
+          %h3
+            %span.introduction-num 2
+            すぐに購入できる
+            = image_tag "start2"
+            %p
+              ボタン１つで即購入。
+              %br あとは出品者からの発送を待つだけです。
+        %li
+          %h3
+            %span.introduction-num 3
+            商品がたくさん
+            = image_tag "start3"
+            %p
+              毎日数十万品以上の新商品が
+              %br 出品されるので、欲しいものがきっと見つかります。
+    .main-dl-area
+      .main-dl-area__inner
+        %h2 誰でも簡単に、売ったり買ったりを楽しめる
+        %p
+          メルカリには、
+          %br ファッションから雑貨、家電、本や漫画に至るまで、
+          幅広いジャンルの商品がたくさん。
+          %br 今はもう店頭に置いていない掘り出し物をも見つかるかもしれません。
+          早速アプリをダウンロードしてはじめよう！
+        .store-btns
+          = link_to image_tag "app-store.svg"
+          = link_to image_tag "google-play.svg"
     .app-banner
       .global-footer
         %a.footer-sell-btn

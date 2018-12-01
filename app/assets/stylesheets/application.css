@@ -3,4 +3,5 @@
 
 @import 'modules/mixin';
 
+@import 'partials/products/global_header';
 @import 'partials/products/index';

@@ -2,6 +2,21 @@
   = render 'shared/global_header'
 
   .main
+    .main-visual
+      .main-visual-contents
+        .main-visual-contents__content
+          %h2.super-title
+            スマホで簡単
+            %br フリマアプリ
+          %p.sub-title
+            メルカリはスマホカメラからすぐに出品できる
+            %br 購入時も安心な独自システムのアプリです
+          .store-btns
+            = link_to do
+              = image_tag "app-store.svg"
+            = lint_to do
+              = image_tag "google-play.svg"
+        = image_tag "main_content_pc.png", class: "main-visual-contents__image"
     .app-banner
       .global-footer
         %a.footer-sell-btn

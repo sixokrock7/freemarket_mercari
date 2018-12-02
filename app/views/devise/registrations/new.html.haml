@@ -1,0 +1,21 @@
+.single-container
+  = render 'shared/single_header'
+
+  .single-main
+    .single-panel
+      .single-panel__sign-up
+        %h2 新規会員登録
+
+      .single-panel__inner
+        .single-panel__btns
+          = link_to user_facebook_omniauth_authorize, class: "sns-btn-facebook" do
+            = fa_icon "facebook-square"
+            Facebookで登録
+          = link_to user_google_oauth2_omniauth_authorize_path, class: "sns-btn sns-btn-google" do
+            =fa_icon "google-plus"
+            Googleで登録
+          = link_to user_google_oauth2_omniauth_authorize_path, class: "sns-btn sns-btn-mail" do
+            = fa_icon "envelope"
+            メールアドレスで登録
+
+  = render 'shared/single_footer'

@@ -1,8 +1,6 @@
 .single-contaner
-  .single-header
-    %h1
-      = link_to do
-        image_tag "logo.svg"
+  = render 'shared/single_header'
+
   .single-main
     .login-panel
       .login-panel__sign-up
@@ -26,16 +24,5 @@
             = f.password_feild :password, autocomplete: "off", class: "input-default", placeholder: "パスワード"
           = f.submit "ログイン", class: "login-submit"
           = link_to "パスワードをお忘れの方", "", class: "reset-password"
-  .single-footer
-    %nav
-      %ul
-        %li
-          = link_to "プライバシーポリシー"
-        %li
-          = link_to "メルカリ利用規約"
-        %li
-          = link_to "特定商取引に関する表記"
-      = link_to "", class: "single-footer__logo" do
-        = image_tag "logo-gray.svg"
-      %p
-        %small ©︎ 2018 Mercari
+
+  = render 'shared/single_footer'

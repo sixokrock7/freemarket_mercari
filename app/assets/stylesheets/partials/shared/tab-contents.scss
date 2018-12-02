@@ -1,0 +1,117 @@
+.mypage-tab-container {
+  margin: 40px 0 0;
+  background: #fff;
+
+  &--notification {
+    margin: 0;
+  }
+}
+
+.mypage-tab-head {
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 72px;
+  background: #fafafa;
+}
+
+.mypage-tabs {
+  font-size: 0;
+  background: #eee;
+  border: 0;
+
+  li {
+    @include textCenter;
+    display: inline-block;
+    vertical-align: top;
+
+    &.active {
+      background: #fff;
+    }
+
+    &.active a {
+      border-top: 2px solid #ea352d;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    color: #333;
+    font-size: 16px;
+    line-height: 72px;
+  }
+}
+
+.mypage-tab-panel {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.mypage-item-link {
+  position: relative;
+  display: block;
+  min-height: 80px;
+  padding: 16px;
+  color: #333;
+
+  figure {
+    position: relative;
+    float: left;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+  }
+  span {
+    display: block;
+    display: -webkit-box;
+    max-height: 4.4em;
+    overflow: hidden;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vartical;
+  }
+
+  &__body {
+    margin: 0 40px 0 68px;
+  }
+
+  .fa-chevron-right {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+
+  .mypage-date {
+    display: inline-block;
+    color: #888;
+
+    .fa-clock-o {
+      margin: 0 8px 0 0;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+}
+
+.mypage-item-not-found {
+  @include textCenter;
+  padding: 160px 0 60px;
+  color: #ccc;
+  font-weight: 600;
+  font-size: 16px;
+  background: image-url("logo-gray-icon");
+  background-repeat: no-repeat;
+  background-position: center 40px;
+}

@@ -1,0 +1,136 @@
+.single-container {
+  padding: 0 0 220px;
+}
+
+.single-header {
+  @include textCenter;
+  height: 128px;
+
+  h1 {
+    padding: 40px 0 0;
+  }
+
+  a {
+    width: 185px;
+    height: 49px;
+    line-height: 49px;
+    display: inline-block;
+    margin: 0 8px 0 0;
+  }
+
+  img {
+    width: 185px;
+    height: 0 8px 0 0;
+  }
+
+  img {
+    width: 185px;
+    height: 49px;
+  }
+}
+
+.login-panel {
+  width: 456px;
+  max-width: none;
+  margin: 0 auto;
+  background: #fff;
+
+  &__sign-up {
+    @include textCenter;
+    padding: 40px 64px;
+
+    p {
+      font-size: 14px;
+    }
+
+    a {
+      display: block;
+      margin: 8px 0 0;
+      border: 1px solid #0099e8;
+      background: #009908;
+      color: #fff;
+      line-height: 40px;
+    }
+  }
+
+  &__inner {
+    padding: 32px 64px;
+    border-top: 1px solid #eee;
+  }
+}
+
+.sns-btn {
+  @include textCenter;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 16%;
+    font-size: 18px;
+    transform: translate(0, -50%);
+  }
+
+  &-facebook {
+    background: #dc4e41;
+    color: #fff;
+  }
+
+  &-google {
+    margin: 16px 0 0;
+    background: #dc4e41;
+    color: #fff;
+  }
+}
+
+.login-form {
+  padding: 24px 64px 32px;
+}
+
+.form-group {
+  margin: 24px 0 0;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  .input-default {
+    display: block;
+    width: 89%:
+    margin: 0;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+}
+
+.login-submit {
+  @include textCenter;
+  margin: 24px 0 0;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  transition: all ease-out .3s;
+  cursor: pointer;
+}
+
+.reset-password {
+  display: block;
+  margin: 40px 0 0;
+}
+

@@ -1,0 +1,29 @@
+.single-contaner
+  .single-header
+    %h1
+      = link_to do
+        image_tag "logo.svg"
+  .single-main
+    .login-panel
+      .login-panel__sign-up
+        %p アカウントをお持ちでない方はこちら
+        = link_to "新規会員登録", new_user_registration_path
+
+      .login-panel__inner
+        = link_to user_facebook_omniauth_authorize_path, class: "sns-btn sns-btn-facebook" do
+          = fa_icon "facebook-square"
+          Facebookでログイン
+        = link_to user_google_oauth2_omniauth_authorize_path, class: "sns-btn sns-btn-google" do
+          = fa_icon "google-plus"
+          Googleでログイン
+
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .login-form
+          = devise_error_messages!
+          .form-group
+            = f.email_field :email, class: "input-default", placeholder: "メールアドレス"
+          .form-group
+            = f.password_feild :password, autocomplete: "off", class: "input-default", placeholder: "パスワード"
+          = f.submit "ログイン", class: "login-submit"
+          = link_to "パスワードをお忘れの方", "", class: "reset-password"
+  .single-footer

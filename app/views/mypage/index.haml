@@ -104,5 +104,64 @@
       = link_to "" do
         = image_tag 'side_banner'
   .mypage-content
+    .mypage-content__user-icon
+      = link_to "" do
+        %figure
+          = image_tag "member_photo_noimage_thumb", width: 60
+        %h2<>
+          = current_user.nickname
+        .mypage-content__number
+          .mypage-content__number__item
+            評価
+            %span 0
+          .mypage-content__number__item
+            出品数
+            %span 0
+    .mypage-tab-container.mypage-tab-container--notification
+      %ul.mypage-tabs
+        %li.active
+          %h3
+            = link_to "お知らせ", ""
+        %li
+          %h3
+            = link_to "やることリスト", ""
+    .mypage-tab-content
+      %ul.mypage-tab-panel.active
+        %li
+          = link_to "", class: "mypage-item-link" do
+            %figure
+              = image_tag "mercari_profile", width: 48
+            .mypage-item-link__body
+              %span 事務局からのメッセージ「【テレビ取材ご協力のお願い】メルカリをユニークに使っている方、大募集！」
+              .mypage-date<>
+                = fa_icon "clock-o"
+                2日前
+            = fa_icon "chevron-right"
+        %li
+          = link_to "", class: "mypage-item-link" do
+            %figure
+              = image_tag "mercari_profile", width: 48
+            .mypage-item-link__body
+              %span 初出品ありがとうございます！5品出品すると売れる確率が約80％まで上がるというデータがあります。もう少し出品してみませんか？
+              .mypage-date<>
+                = fa_icon "clock-o"
+                2日前
+            = fa_icon "chevron-right"
+
+    .mypage-tab-container
+      %h2.mypage-tab-head 購入した商品
+      %ul.mypage-tabs
+        %li.active
+          %h3
+            = link_to "取引中", ""
+        %li
+          %h3
+            = link_to "購入した商品", ""
+      .mypage-tab-content
+        %ul.mypage-tab-panel.active
+          %li.mypage-item-not-found
+            取引中の商品がありません
+
+        %ul.mypage-tab-panel
 
 = render 'shared_global_footer'

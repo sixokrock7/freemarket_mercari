@@ -91,9 +91,6 @@
 }
 
 .login-nav-lists {
-  a {
-    color: #333;
-  }
 
   figure {
     line-height: 0;
@@ -146,5 +143,9 @@
     margin: 0 0 0 8px;
     font-size: 14px;
     vertical-align: middle;
+  }
+
+  &__signed-in-elements {
+    color: #333;
   }
 }

@@ -30,18 +30,18 @@
         %ul.login-nav-lists
           - if user_signed_in?
             %li
-              = link_to mypage_index_path do
+              = link_to mypage_index_path, class: "login-nav-lists__signed-in-elements" do
                 .login-nav-lists__icon
                   %figure
                     %div
                       = image_tag 'member_photo_noimage_thumb', width: 32
                 .login-nav-lists__mypage マイページ
             %li
-              = link_to "" do
+              = link_to "", class: "login-nav-lists__signed-in-elements" do
                 = fa_icon "bell"
                 %span お知らせ
             %li
-              = link_to "" do
+              = link_to "", class: "login-nav-lists__signed-in-elements" do
                 = fa_icon "check"
                 %span やることリスト
           - else

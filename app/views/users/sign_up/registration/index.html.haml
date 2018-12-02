@@ -21,7 +21,7 @@
             %span.form-require 必須
             = f.text_field :password, class: "input-default input-with-margin"
             .form_group
-            %label{ for: 'nickname' } パスワード
+            %label{ for: 'nickname' } パスワード（確認）
             %span.form-require 必須
             = f.text_field :password_confirmation, autocomplete: "off", class: "input-default input-with-margin"
           = f.submit "次へ進む", class: "login-submit"

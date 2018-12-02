@@ -97,7 +97,7 @@
             電話番号の確認
             = fa_icon 'chevron-right'
         %li
-          = link_to "" , class: 'mypage-nav__item' do
+          = link_to destroy_user_session_path, method: :delete, class: 'mypage-nav__item' do
             ログアウト
             = fa_icon 'chevron-right'
     .mypage-ad

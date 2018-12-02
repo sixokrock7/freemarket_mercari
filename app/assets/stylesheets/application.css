@@ -3,6 +3,8 @@
 
 @import 'modules/mixin';
 
+@import 'partials/mypage/index';
+
 @import 'partials/products/global_header';
 @import 'partials/products/index';
 @import 'partials/products/global_footer';

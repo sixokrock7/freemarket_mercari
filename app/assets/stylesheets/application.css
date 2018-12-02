@@ -3,6 +3,14 @@
 
 @import 'modules/mixin';
 
+@import 'partials/mypage/index';
+
 @import 'partials/products/global_header';
 @import 'partials/products/index';
+@import 'partials/products/new';
 @import 'partials/products/global_footer';
+
+@import 'partials/shared/single-panel';
+@import 'partials/shared/tab-contents';
+
+@import 'partials/users/sign_in';

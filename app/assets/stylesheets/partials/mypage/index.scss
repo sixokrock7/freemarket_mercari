@@ -1,0 +1,128 @@
+.mypage-container {
+  @include clearFix;
+  width: 1020px;
+  margin: 40px auto 0;
+  padding: 0 0 40px;
+}
+
+.mypage-nav {
+  list-style: none;
+
+  &__head {
+    margin: 40px 0 0;
+    font-size: 16px;
+  }
+
+  &__list li {
+    border-top: 1px solid #eee;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    min-height: 48px;
+    padding: 16px;
+    color: #333;
+    background: #fff;
+
+    &:hover {
+      text-decoration: none;
+      background: #fafafa;
+      opacity: 1;
+
+      .fa-chevron-right {
+        color: #333;
+        -webkit-transform: translate(4px, -50%);
+        transform: translate(4px, -50px);
+      }
+    }
+  }
+
+  .fa-chevron-right {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    color: #ccc;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+}
+
+.mypage-side {
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+}
+
+.mypage-ad {
+  margin: 40px 0 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.mypage-content {
+  float: left;
+  width: 700px;
+
+  &__user-icon {
+    @include textCenter;
+    position: relative;
+    height: 200px;
+    padding: 20px;
+    background-image: image-url("user-bg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    a {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      display: block;
+      color: #333;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+    }
+
+    figure {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    image {
+      vertical-align: middle;
+    }
+
+    h2 {
+      z-index: 0;
+      margin: 8px 0 0;
+      font-size: 14px;
+    }
+  }
+
+  &__number {
+    margin: 8px 0 0;
+    font-size: 0;
+
+    &__item {
+      display: inline-block;
+      margin: 0 0 0 16px;
+      font-size: 14px;
+
+      &:first {
+        margin: 0;
+      }
+
+      span {
+        font-weight:
+      }
+    }
+  }
+}

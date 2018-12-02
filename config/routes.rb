@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :registration, only: [:index]
       resources :address, only: [:index]
       resources :payment, only: [:index]
+      resources :done, only: [:index]
     end
   end
 end

@@ -1,0 +1,11 @@
+@mixin clearFix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin textCenter {
+  text-align: center;
+}

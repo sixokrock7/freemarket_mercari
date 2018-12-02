@@ -1,7 +1,15 @@
 
 *.cache
 
+<<<<<<< HEAD
+*.pid
+=======
 tmp/pids/server.pid
+
+log/development.log
+
+log/development.log
+>>>>>>> master
 
 log/development.log
 

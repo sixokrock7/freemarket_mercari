@@ -1,0 +1,203 @@
+.default-container
+  = render 'shared/global_header'
+
+  .main
+    .main-visual
+      .main-visual-contents
+        .main-visual-contents__content
+          %h2.super-title
+            スマホで簡単
+            %br フリマアプリ
+          %p.sub-title
+            メルカリはスマホカメラからすぐに出品できる
+            %br 購入時も安心な独自システムのアプリです
+          .store-btns
+            = link_to do
+              = image_tag "app-store.svg"
+            = lint_to do
+              = image_tag "google-play.svg"
+        = image_tag "main_content_pc.png", class: "main-visual-contents__image"
+    .main-introduction
+      %h2.main-introduction__title
+        メルカリは、かんたんに売り買いができて、
+        %br あんしん・あんぜんなお取引ができる
+        フリマアプリです。
+      %ul.main-introduction__lists
+        %li
+          %h3
+            %span.introduction-num 1
+            簡単に出品できる
+            = image_tag "start1"
+            %p
+              スマホで写真を撮って
+              %br 特徴を入力するだけで、
+              簡単に出品できます。
+          %h3
+            %span.introduction-num 2
+            すぐに購入できる
+            = image_tag "start2"
+            %p
+              ボタン１つで即購入。
+              %br あとは出品者からの発送を待つだけです。
+        %li
+          %h3
+            %span.introduction-num 3
+            商品がたくさん
+            = image_tag "start3"
+            %p
+              毎日数十万品以上の新商品が
+              %br 出品されるので、欲しいものがきっと見つかります。
+    .main-dl-area
+      .main-dl-area__inner
+        %h2 誰でも簡単に、売ったり買ったりを楽しめる
+        %p
+          メルカリには、
+          %br ファッションから雑貨、家電、本や漫画に至るまで、
+          幅広いジャンルの商品がたくさん。
+          %br 今はもう店頭に置いていない掘り出し物をも見つかるかもしれません。
+          早速アプリをダウンロードしてはじめよう！
+        .store-btns
+          = link_to image_tag "app-store.svg"
+          = link_to image_tag "google-play.svg"
+    .main-key-features
+      %h2 メルカリの特徴
+      .main-key-features__container
+        .main-key-features__item
+          %figure
+            = image_tag "watch.svg"
+          %h3.main-key-features__sub-title 3分でかんたん売り買い
+          %p.main-key-features__description 着なくなった服や小物、本などを売ってみよう！ お小遣い稼ぎに使えます
+        .main-key-features__item
+          %figure
+            = image_tag "lock.svg"
+          %h3.main-key-features__sub-title あんしんの売り買いシステム
+          %p.main-key-features_description お金のやり取りはメルカリが仲介し、商品が届いてから出品者に振り込まれるので安心です
+        .main-features__item
+          %figure
+            = image_tag "card.svg"
+          %h3.main-key-features__sub-title 多彩な支払い方法
+          %p.main-key-features__description 購入した商品のお支払いは、クレジットカード/ポイント/売上金からどうぞ！
+        .main-key-features__item
+          %figure
+            = image_tag "free-jp.svg"
+          %h3.main-key-features__sub-title 出品はもちろん無料
+          %p.main-key-features__description その他、会員登録料・月会費・カード手数料は一切かかりません
+    .main-pick-up-container
+      %h2.main-pick-up-container__head
+        ピックアップカテゴリー
+      .items-box-container
+        %h3.items-box-container__name
+         =link_to "レディース"
+        .items-box_container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  =image_tag "item_sample.jpeg"
+                .items-box__body
+                  %h3.items-box__name
+                    ★hysteric glamorUSED加工デニム スキニーパンツ★
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+      .item-box-container
+        %h3.items-box-container__name
+          = link_to "メンズ"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "item_sample.jpeg"
+                .items-box__body
+                  %h3.items-box__name
+                    ★hysteric glamorUSED加工デニム スキニーパンツ★
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "ベビー・キッズ"
+        .items-box-cantainer__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "item_sample.jpeg"
+                .items-box__body
+                  %h3.items-box-name
+                    ★hysteric glamorUSED加工デニム スキニーパンツ★
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+
+    .main-pick-up-container
+      %h2.main-pick-up-container__head
+        ピックアップブランド
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "シャネル"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+               %figure.items-box__photo
+                = image_tag "item_sample.jpeg"
+              .items-box__body
+                %h3.items-box__name
+                  ★hysteric glamorUSED加工デニム スキニーパンツ★
+                .items-box__num
+                  .items-box__price
+                    ¥ 1.888
+                  .items-box__likes
+                    = fa_icon "heart"
+                    %span 4
+                  %p.items-box__tax 税込
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "ルイ・ヴィトン"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+               %figure.items-box__photo
+                = image_tag "item_sample.jpeg"
+              .items-box__body
+                %h3.items-box__name
+                  ★hysteric glamorUSED加工デニム スキニーパンツ★
+                .items-box__num
+                  .items-box__price
+                    ¥ 1.888
+                  .items-box__likes
+                    = fa_icon "heart"
+                    %span 4
+                  %p.items-box__tax 税込
+    .app-banner
+      .app-banner__inner
+        .app-banner__contents
+          %h2 スマホでかんたんフリマアプリ
+          %p 今すぐ無料ダウンロード！
+          .app-banner__icons
+            %figure
+              = image_tag "mercari_icon.png", width: 68
+            %ul
+              %li
+                = link_to image_tag "app-store.svg"
+              %li
+                = link_to image_tag "google-play.svg"
+        %figure.phones-image
+          = image_tag "download_content_pc.png"
+    = render "shared/global_footer"
+    %a.footer-sell-btn

@@ -281,6 +281,7 @@
     position: relative;
     width: 220px;
     height: 220px;
+    padding: 0 0 100%;
 
     img {
       position: absolute;
@@ -330,5 +331,84 @@
   a {
     display: block;
     color: #333;
+  }
+}
+
+.app-banner {
+  background: image-url("download_bg_pc");
+  background-position: center;
+
+  &__inner {
+    overflow: hidden;
+    position: relative;
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    color: #fff;
+
+    .phones-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 300px;
+      height: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__contents {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    h2 {
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      font-size: 24px;
+    }
+
+    p {
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      margin: 10px 0 0;
+      font-size: 35px;
+    }
+  }
+}
+
+.app-banner__icons {
+  @include clearFix;
+  margin: 20px 0 0;
+
+  figure {
+    float: left;
+  }
+
+  ul {
+    @include clearFix;
+    float: left;
+    margin: 0 0 0 24px;
+    line-height: 68px;
+  }
+
+  li {
+    float: left;
+
+    &:last-child {
+      margin: 0 0 0 16px;
+    }
+  }
+
+  a {
+    display: block;
+    line-height: 68px;
+  }
+
+  img {
+    vertical-align: middle;
   }
 }

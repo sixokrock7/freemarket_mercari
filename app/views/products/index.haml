@@ -185,5 +185,19 @@
                     %span 4
                   %p.items-box__tax 税込
     .app-banner
-      .global-footer
-        %a.footer-sell-btn
+      .app-banner__inner
+        .app-banner__contents
+          %h2 スマホでかんたんフリマアプリ
+          %p 今すぐ無料ダウンロード！
+          .app-banner__icons
+            %figure
+              = image_tag "mercari_icon.png", width: 68
+            %ul
+              %li
+                = link_to image_tag "app-store.svg"
+              %li
+                = link_to image_tag "google-play.svg"
+        %figure.phones-image
+          = image_tag "download_content_pc.png"
+    = render "shared/global_footer"
+    %a.footer-sell-btn

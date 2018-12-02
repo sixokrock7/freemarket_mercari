@@ -59,7 +59,7 @@
         .store-btns
           = link_to image_tag "app-store.svg"
           = link_to image_tag "google-play.svg"
-    %section.main-key-features
+    .main-key-features
       %h2 メルカリの特徴
       .main-key-features__container
         .main-key-features__item
@@ -82,6 +82,108 @@
             = image_tag "free-jp.svg"
           %h3.main-key-features__sub-title 出品はもちろん無料
           %p.main-key-features__description その他、会員登録料・月会費・カード手数料は一切かかりません
+    .main-pick-up-container
+      %h2.main-pick-up-container__head
+        ピックアップカテゴリー
+      .items-box-container
+        %h3.items-box-container__name
+         =link_to "レディース"
+        .items-box_container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  =image_tag "item_sample.jpeg"
+                .items-box__body
+                  %h3.items-box__name
+                    ★hysteric glamorUSED加工デニム スキニーパンツ★
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+      .item-box-container
+        %h3.items-box-container__name
+          = link_to "メンズ"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "item_sample.jpeg"
+                .items-box__body
+                  %h3.items-box__name
+                    ★hysteric glamorUSED加工デニム スキニーパンツ★
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "ベビー・キッズ"
+        .items-box-cantainer__content
+          - 4.times do
+            .items-box
+              = link_to do
+                %figure.items-box__photo
+                  = image_tag "item_sample.jpeg"
+                .items-box__body
+                  %h3.items-box-name
+                    ★hysteric glamorUSED加工デニム スキニーパンツ★
+                  .items-box__num
+                    .items-box__price
+                      ¥ 1,888
+                    .items-box__likes
+                      = fa_icon "heart"
+                      %span 4
+                    %p.items-box__tax 税込
+
+    .main-pick-up-container
+      %h2.main-pick-up-container__head
+        ピックアップブランド
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "シャネル"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+               %figure.items-box__photo
+                = image_tag "item_sample.jpeg"
+              .items-box__body
+                %h3.items-box__name
+                  ★hysteric glamorUSED加工デニム スキニーパンツ★
+                .items-box__num
+                  .items-box__price
+                    ¥ 1.888
+                  .items-box__likes
+                    = fa_icon "heart"
+                    %span 4
+                  %p.items-box__tax 税込
+      .items-box-container
+        %h3.items-box-container__name
+          = link_to "ルイ・ヴィトン"
+        .items-box-container__content
+          - 4.times do
+            .items-box
+              = link_to do
+               %figure.items-box__photo
+                = image_tag "item_sample.jpeg"
+              .items-box__body
+                %h3.items-box__name
+                  ★hysteric glamorUSED加工デニム スキニーパンツ★
+                .items-box__num
+                  .items-box__price
+                    ¥ 1.888
+                  .items-box__likes
+                    = fa_icon "heart"
+                    %span 4
+                  %p.items-box__tax 税込
     .app-banner
       .global-footer
         %a.footer-sell-btn

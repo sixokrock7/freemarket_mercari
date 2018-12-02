@@ -1,0 +1,46 @@
+.single-container
+  = render "shared/single_header"
+
+  .single-main
+    .signup-panel
+      .signup-panel__sign-up
+        %h2 支払い方法
+
+      .signup-panel__inner
+        .signup-panel__contents
+          = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+            .form-group
+              %label{ for: "nickname" } カード番号
+              %span.form-require 必須
+              = f.text_field :nickname, class: "input-default input-with-margin", placeholder: "半角数字のみ"
+              %ul
+                %li
+                  = image_tag "visa.svg"
+                %li
+                  = image_tag "master-card.svg"
+                %li
+                  = image_tag "dinersclub.svg"
+                %li
+                  = image_tag "discover.svg"
+            .form-group
+              %label{ for: "nickname" } 有効期限
+              %span.form-require 必須
+              %br
+              .select-wrap
+                = select_tag :payment_card_expire_mm, "", class: "select-default"
+                = fa_icon "chevron-down", class: "icon-chevron-down"
+              %span 月
+              %ul.hoge
+              .select-wrap
+                = select_tag :payment_card_expire_dd, "", class: "select-default"
+                = fa_icon "chevron-down", class: "icon-chevron-down"
+              %span 年
+            .form-group
+              %label{ for: 'nickname' } セキュリティコード
+              %span.form-require 必須
+              = f.password_field :password_confirmation, autocomplete: "off", class: "input-default input-with-margin", placeholder: "カード背面4桁もしくは3桁の番号"
+              .sign-up-seq-code
+                .sign-up-seq-code__text
+            = f.submit "次へ進む", class: "login-submit"
+
+  = render "shared/single_footer"

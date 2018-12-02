@@ -1,0 +1,16 @@
+.single-container.sign-up-done
+  = render "shared/single_header"
+
+  .single-main
+    .signup-panel
+      .signup-panel__sign-up
+        %h2 会員登録完了
+
+      .signup-panel__inner
+        .signup-panel__contents
+          %p
+            ありがとうございます。
+            %br 会員登録が完了しました。
+          = link_to "次へ進む", "", class: "login-submit"
+
+  =render "shared/single_footer"

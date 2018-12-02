@@ -105,6 +105,11 @@
     margin: 0;
   }
 
+  label {
+    font-weight: 600;
+    display: inline-block;
+  }
+
   .input-default {
     background-color: rbg(250, 255, 189) !important;
     display: block;
@@ -116,6 +121,10 @@
     background: #fff;
     line-height: 1.5;
     font-size: 16px;
+  }
+
+  .input-with-margin {
+    margin: 8px 0 0;
   }
 }
 

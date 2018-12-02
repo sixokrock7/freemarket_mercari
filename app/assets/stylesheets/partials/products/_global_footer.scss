@@ -1,0 +1,84 @@
+.global_footer {
+  padding: 60px 0;
+  background: #212121;
+  text-align: center;
+  color: #fff;
+
+  nav {
+    width: 1020px;
+    margin: 0 auto;
+
+    .footer-cell {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 23%;
+      margin: 0 2% 0 0;
+      vertical-align: top;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    .footer-head {
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+
+  a {
+    display: block;
+    color: #fff;
+  }
+}
+
+.footer-contents {
+
+  li {
+    margin: 16px;
+
+    &:first-child {
+      margin: 24px 0 0;
+    }
+  }
+}
+
+.footer-contents-lang {
+  img {
+    margin: 0 8px 0 0;
+    width: 22px;
+    vertical-align: middle;
+  }
+}
+
+.footer-mercari-logo {
+  display: block;
+  margin: 40px 0 0;
+}
+
+.footer-copyright {
+  margin: 8px;
+}
+
+.footer-sell-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 160px;
+  height: 160px;
+
+  font-size: 22px;
+  border-radius: 50%;
+  background: #ea352d;
+  color: #fff;
+  @include textCenter;
+
+  div {
+    margin: 32px 0 0;
+  }
+
+  i {
+    margin: 8px 0 0;
+    font-size: 54px;
+  }
+}

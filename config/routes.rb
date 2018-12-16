@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: "users/omniauthable_callbacks" }
+  devise_for :users, controllers: {
+    registrations: 'users/registration',
+    # registrations: 'users/sign_up/registration',
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
   root to: 'products#index'
   resources :mypage, only: [:index]
   resources :products, only: [:index]
   resources :users, only: [:edit]
-  
+
   namespace :users do
     namespace :sign_up do
-      resources :registration, only: [:index]
+      get 'address', to: 'address#new'
+      get 'registration', to: 'registration#new'
+
       resources :address, only: [:index]
       resources :payment, only: [:index]
       resources :done, only: [:index]

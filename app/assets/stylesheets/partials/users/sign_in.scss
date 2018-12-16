@@ -77,7 +77,8 @@
   }
 
   &-facebook {
-    background: #dc4e41;
+    margin: 16px 0 0;
+    background: #385185;
     color: #fff;
   }
 
@@ -88,7 +89,7 @@
   }
 
   &-mail {
-    margin: 16px;
+    margin: 16px 0 0;
     background: #eee;
     color: #000;
   }
@@ -112,7 +113,7 @@
 
   .input-default {
     display: block;
-    width: 89%:
+    width: 89%;
     margin: 0;
     padding: 10px 16px 8px;
     border-radius: 4px;

@@ -68,7 +68,7 @@
             = link_to "メルカリボックス"
       %li.footer-cell
         %h2.footer-head 国
-        %ul.footer-contentsfooter-contents-lang
+        %ul.footer-contents.footer-contents-lang
           %li
             = link_to do
               = image_tag "flag_us.png"
@@ -82,10 +82,10 @@
               = image_tag "flag_jp.png"
               日本
 
-= link_to "", class: "footer-mercari-logo" do
-  = image_tag "logo-white.svg"
-%p.footer-copyright
-  %small ©️ 2018 Mercari
+  = link_to "", class: "footer-mercari-logo" do
+    = image_tag "logo-white.svg"
+  %p.footer-copyright
+    %small ©️ 2018 Mercari
 = link_to "", class: "footer-sell-btn" do
   %div 出品
   = fa_icon "camera"

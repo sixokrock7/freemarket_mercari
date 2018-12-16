@@ -1,4 +1,5 @@
 class Users::SignUp::RegistrationController < ApplicationController
-  def index
+  def new
+    # binding.pry
   end
 end

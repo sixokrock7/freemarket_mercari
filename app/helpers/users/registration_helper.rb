@@ -1,4 +1,4 @@
-module Users::SignUp::RegistrationHelper
+module Users::RegistrationHelper
   def resource_name
     :user
   end

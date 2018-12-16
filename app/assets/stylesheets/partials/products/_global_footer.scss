@@ -1,4 +1,4 @@
-.global_footer {
+.global-footer {
   padding: 60px 0;
   background: #212121;
   text-align: center;
@@ -14,7 +14,7 @@
       width: 23%;
       margin: 0 2% 0 0;
       vertical-align: top;
-
+      // float: left;
       &:last-child {
         margin: 0;
       }
@@ -35,7 +35,7 @@
 .footer-contents {
 
   li {
-    margin: 16px;
+    margin: 16px 0 0;
 
     &:first-child {
       margin: 24px 0 0;
@@ -57,7 +57,7 @@
 }
 
 .footer-copyright {
-  margin: 8px;
+  margin: 8px 0 0;
 }
 
 .footer-sell-btn {

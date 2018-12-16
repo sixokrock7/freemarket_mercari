@@ -60,6 +60,10 @@
   background: #fff;
   margin: 8px 0 0;
 
+  &--payment {
+    width: 35%;
+  }
+
   select {
     width: 100%;
     -webkit-appearance: none;
@@ -96,3 +100,55 @@
   @include textCenter;
   font-size: 16px;
 }
+ .red-submit-btn {
+  @include textCenter;
+  display: block;
+  width: 100%;
+  margin: 24px 0 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 48px;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  cursor: pointer;
+  transition: all ease-out 0.3s;
+ }
+
+ .gray-cancel-btn {
+  @include textCenter;
+  display: block;
+  width: 45%;
+  margin: 24px auto 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 48px;
+  background: #aaa;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  transition: all ease-out 0.3s;
+ }
+
+ .textarea-default {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 104px;
+  margin: 8px 0 0;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  border: 1px solid #ccc;
+ }
+
+ .input-default {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px 16px 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ }

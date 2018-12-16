@@ -1,0 +1,30 @@
+.single-contaner
+  = render 'shared/single_header'
+
+  .single-main
+    .single-panel
+      .signup-panel__sign-up
+        %h2 会員情報入力
+
+      .signup-panel__inner
+        .signup-panel__contents
+          = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+            .form_group
+              = f.label :nickname, 'ニックネーム'
+              %span.form-require 必須
+              = f.text_field :nickname, class: "input-default input-with-margin"
+            .form_group
+              = f.label :email, 'メールアドレス'
+              %span.form-require 必須
+              = f.email_field :email, class: "input-default input-with-margin"
+              .form_group
+              = f.label :password, 'パスワード'
+              %span.form-require 必須
+              = f.password_field :password, class: "input-default input-with-margin"
+              .form_group
+              = f.label :password_confirmation, 'パスワード（確認）'
+              %span.form-require 必須
+              = f.password_field :password_confirmation, autocomplete: "off", class: "input-default input-with-margin"
+            = f.submit "次へ進む", class: "login-submit"
+
+  = render "shared/single_footer"

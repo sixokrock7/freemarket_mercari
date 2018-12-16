@@ -14,7 +14,7 @@
           .store-btns
             = link_to do
               = image_tag "app-store.svg"
-            = lint_to do
+            = link_to do
               = image_tag "google-play.svg"
         = image_tag "main_content_pc.png", class: "main-visual-contents__image"
     .main-introduction
@@ -72,7 +72,7 @@
             = image_tag "lock.svg"
           %h3.main-key-features__sub-title あんしんの売り買いシステム
           %p.main-key-features_description お金のやり取りはメルカリが仲介し、商品が届いてから出品者に振り込まれるので安心です
-        .main-features__item
+        .main-key-features__item
           %figure
             = image_tag "card.svg"
           %h3.main-key-features__sub-title 多彩な支払い方法
@@ -87,8 +87,8 @@
         ピックアップカテゴリー
       .items-box-container
         %h3.items-box-container__name
-         =link_to "レディース"
-        .items-box_container__content
+          =link_to "レディース"
+        .items-box-container__content
           - 4.times do
             .items-box
               = link_to do
@@ -104,7 +104,7 @@
                       = fa_icon "heart"
                       %span 4
                     %p.items-box__tax 税込
-      .item-box-container
+      .items-box-container
         %h3.items-box-container__name
           = link_to "メンズ"
         .items-box-container__content
@@ -133,7 +133,7 @@
                 %figure.items-box__photo
                   = image_tag "item_sample.jpeg"
                 .items-box__body
-                  %h3.items-box-name
+                  %h3.items-box__name
                     ★hysteric glamorUSED加工デニム スキニーパンツ★
                   .items-box__num
                     .items-box__price
@@ -142,7 +142,6 @@
                       = fa_icon "heart"
                       %span 4
                     %p.items-box__tax 税込
-
     .main-pick-up-container
       %h2.main-pick-up-container__head
         ピックアップブランド
@@ -152,9 +151,9 @@
         .items-box-container__content
           - 4.times do
             .items-box
-              = link_to do
-               %figure.items-box__photo
-                = image_tag "item_sample.jpeg"
+              = link_to root_path do
+                %figure.items-box__photo
+                  = image_tag "item_sample.jpeg"
               .items-box__body
                 %h3.items-box__name
                   ★hysteric glamorUSED加工デニム スキニーパンツ★
@@ -171,9 +170,9 @@
         .items-box-container__content
           - 4.times do
             .items-box
-              = link_to do
-               %figure.items-box__photo
-                = image_tag "item_sample.jpeg"
+              = link_to root_path do
+                %figure.items-box__photo
+                  = image_tag "item_sample.jpeg"
               .items-box__body
                 %h3.items-box__name
                   ★hysteric glamorUSED加工デニム スキニーパンツ★
@@ -199,5 +198,4 @@
                 = link_to image_tag "google-play.svg"
         %figure.phones-image
           = image_tag "download_content_pc.png"
-    = render "shared/global_footer"
-    %a.footer-sell-btn
+      = render "shared/global_footer"

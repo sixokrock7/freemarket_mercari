@@ -1,7 +1,7 @@
+@import 'font-awesome';
 @import 'reset';
-@import 'common';
-
 @import 'modules/mixin';
+@import 'default';
 
 @import 'partials/mypage/index';
 
@@ -11,5 +11,9 @@
 @import 'partials/products/global_footer';
 
 @import 'partials/users/sign_in';
-@import 'partials/users/sign_up';
+
+@import 'partials/shared/common';
+@import 'partials/shared/items-box';
+@import 'partials/shared/single-panel';
+@import 'partials/shared/tab-contents';
 

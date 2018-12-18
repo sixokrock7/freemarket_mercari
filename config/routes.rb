@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   }
   root to: 'products#index'
   resources :mypage, only: [:index]
-  resources :products, only: [:index]
+  resources :products, except: :show
   resources :users, only: [:edit]
 
   namespace :users do

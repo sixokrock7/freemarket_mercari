@@ -1,0 +1,98 @@
+.signup-panel {
+  width: 700px;
+  max-width: none;
+  margin: 0 auto;
+  background: #fff;
+
+  &__sign-up {
+    @include textCenter;
+
+    h2 {
+      padding: 32px 16px;
+      font-size: 22px;
+    }
+  }
+
+  &__inner {
+    padding: 64px;
+    border-top: 1px solid #eee;
+  }
+
+  &__btns {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+.form-require {
+  @include commonFormLabel;
+  background: #ea352d;
+}
+
+.form-arbitrary {
+  @include commonFormLabel;
+  background: #ccc;
+}
+
+.sign-up-card-list {
+  margin: 8px 0 0;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 0 0;
+    vertical-align: middle;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    img {
+      height: 20px;
+    }
+  }
+}
+
+.select-wrap {
+  display: inline-block;
+  width: 35%;
+  position: relative;
+  background: #fff;
+  margin: 8px 0 0;
+
+  select {
+    width: 100%;
+    -webkit-appearnce: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+.select-default {
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.icon-chevron-down {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  z-index: 2;
+  color: #888;
+  font-size: 8px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.sign-up-done p {
+  text-align: center;
+  font-size: 16px;
+}
